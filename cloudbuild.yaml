@@ -1,9 +1,10 @@
-#steps: # Significa, quais passos vamos executar
-#
-#  - id: "Executar o docker-compose" # Nome da etapa
-#    name: 'gcr.io/$PROJECT_ID/docker-compose:1.25.5' # Informa a imagem que o docker tem para ele rodar o docker-compose, nesse caso escolhi a imagem docker-compose
-#    args: ['-f', 'docker-compose.cloudbuild.yaml', 'up', '-d'] # argumento que quero que ele faça no docker-compose
-#
+steps:
+
+  - id: "Build da imagem" # Nome da etapa
+    name: 'gcr.io/$PROJECT_ID/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/ci-golang-tdd:latest', '-f', './docker/Dockerfile', '.']
+    images: ['gcr.io/$PROJECT_ID/ci-golang-tdd:latest:latest']
+
 #  - id: "Executar o composer"
 #    name: 'gcr.io/cloud-builders/docker'
 #    args: ['exec', '-t', 'app', 'composer', 'install']

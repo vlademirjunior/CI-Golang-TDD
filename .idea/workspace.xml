@@ -35,12 +35,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1601078724" />
+                    <option name="branchName" value="bugfix/cloudbuild" />
+                    <option name="lastUsedInstant" value="1601079008" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="bugfix/cloudbuild" />
-                    <option name="lastUsedInstant" value="1601078579" />
+                    <option name="branchName" value="develop" />
+                    <option name="lastUsedInstant" value="1601078724" />
                   </RecentBranch>
                 </list>
               </option>
@@ -90,5 +90,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="623" y="238" width="672" height="678" key="search.everywhere.popup" timestamp="1601079052920">
+      <screen x="0" y="0" width="1920" height="1056" />
+    </state>
+    <state x="623" y="238" width="672" height="678" key="search.everywhere.popup/1920.312.1366.768/0.0.1920.1056@0.0.1920.1056" timestamp="1601079052920" />
   </component>
 </project>

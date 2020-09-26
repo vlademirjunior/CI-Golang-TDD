@@ -13,7 +13,6 @@
     <list default="true" id="1f172c6d-e162-4a30-a7be-b26456d298cf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +35,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="bugfix/cloudbuild" />
-                    <option name="lastUsedInstant" value="1601079008" />
+                    <option name="branchName" value="feature/readme" />
+                    <option name="lastUsedInstant" value="1601091233" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1601078724" />
+                    <option name="lastUsedInstant" value="1601091184" />
                   </RecentBranch>
                 </list>
               </option>

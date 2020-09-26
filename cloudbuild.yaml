@@ -4,24 +4,24 @@ steps:
     args: [ "version" ]
     env: [ "GOPATH=." ]
 
-  - id: "Rodando Lint no código-fonte"
+  - id: "Rodando Lint no código-fonte..."
     name: "golangci/golangci-lint"
     args: [ "golangci-lint","run" ]
 
-  - id: "Detectando problemas de segurança de código-fonte"
+  - id: "Detectando problemas de segurança de código-fonte..."
     name: "securego/gosec"
     args: [ "." ]
     env: [ "GOPATH=." ]
 
-  - id: "Rodando Teste"
+  - id: "Rodando Teste..."
     name: "gcr.io/cloud-builders/go"
     args: [ "test", "./src" ]
     env: [ "GOPATH=." ]
 
-  - id: "Construindo a Imagem"
+  - id: "Construindo a Imagem..."
     name: "gcr.io/cloud-builders/docker"
     args: ["build", "-t", "gcr.io/$PROJECT_ID/ci-golang-tdd:$SHORT_SHA", "-f", "./.docker/Dockerfile", "."]
 
-  - id: "Subindo da Imagem"
+  - id: "Subindo a Imagem..."
     name: "gcr.io/cloud-builders/docker"
     args: [ "push", "gcr.io/$PROJECT_ID/ci-golang-tdd:$SHORT_SHA" ]

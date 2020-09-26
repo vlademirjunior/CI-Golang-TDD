@@ -4,12 +4,10 @@ steps:
     args: [ "version" ]
     env: [ "GOPATH=." ]
 
-  # Veja https://github.com/golangci/golangci-lint
   - id: "Rodando Lint no código-fonte"
     name: "golangci/golangci-lint"
     args: [ "golangci-lint","run" ]
 
-  # Veja: https://rollout.io/blog/put-gosec-pipeline-spot-source-code-security-problems/
   - id: "Detectando problemas de segurança de código-fonte"
     name: "securego/gosec"
     args: [ "." ]

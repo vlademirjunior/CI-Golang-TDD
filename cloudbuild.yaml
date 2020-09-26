@@ -1,31 +1,29 @@
 steps:
-  # see https://www.npmjs.com/package/editorconfig-checker
-  - id: eclint
-    name: "e53e225/editorconfig-checker"
-
-  - id: go_version
+  - id: "Versão do Go"
     name: "gcr.io/cloud-builders/go"
     args: [ "version" ]
     env: [ "GOPATH=." ]
 
-  - id: go_linter
+  # Veja https://github.com/golangci/golangci-lint
+  - id: "Corrigindo código"
     name: "golangci/golangci-lint"
     args: [ "golangci-lint","run" ]
 
-  - id: go_test
+  - id: "Rodando Teste"
     name: "gcr.io/cloud-builders/go"
-    args: [ "test", "-v" ]
+    args: [ "test", "./" ]
     env: [ "GOPATH=." ]
 
-  - id: go_security
+  # Veja: https://rollout.io/blog/put-gosec-pipeline-spot-source-code-security-problems/
+  - id: "Detectando problemas de segurança de código-fonte"
     name: "securego/gosec"
     args: [ "src" ]
     env: [ "GOPATH=." ]
 
-  - id: "Build da Imagem"
+  - id: "Construindo a Imagem"
     name: "gcr.io/cloud-builders/docker"
     args: ["build", "-t", "gcr.io/$PROJECT_ID/ci-golang-tdd:$SHORT_SHA", "-f", "./.docker/Dockerfile", "."]
 
-  - id: "Push da Imagem"
+  - id: "Subindo da Imagem"
     name: "gcr.io/cloud-builders/docker"
     args: [ "push", "gcr.io/$PROJECT_ID/ci-golang-tdd:$SHORT_SHA" ]

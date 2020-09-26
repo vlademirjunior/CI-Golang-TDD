@@ -1,6 +1,7 @@
 # Desafio de CI
 
 ### Como rodar os testes:
+- Dentro do diretório `./src`
 ```shell script
 $ go test main.go main_test.go
 ```

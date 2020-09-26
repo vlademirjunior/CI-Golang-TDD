@@ -4,8 +4,6 @@ steps:
   - 'build'
   - '-t'
   - 'gcr.io/$PROJECT_ID/ci-golang-tdd:latest'
-  - '-f'
-  - './docker/Dockerfile'
   - '.'
 - name: 'gcr.io/$PROJECT_ID/ci-golang-tdd'
 

@@ -35,12 +35,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="bugfix/cloudbuild" />
-                    <option name="lastUsedInstant" value="1601078579" />
+                    <option name="branchName" value="develop" />
+                    <option name="lastUsedInstant" value="1601078724" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1601078578" />
+                    <option name="branchName" value="bugfix/cloudbuild" />
+                    <option name="lastUsedInstant" value="1601078579" />
                   </RecentBranch>
                 </list>
               </option>

@@ -5,19 +5,19 @@ steps:
     env: [ "GOPATH=." ]
 
   # Veja https://github.com/golangci/golangci-lint
-  - id: "Corrigindo código"
+  - id: "Rodando Lint no código-fonte"
     name: "golangci/golangci-lint"
     args: [ "golangci-lint","run" ]
-
-  - id: "Rodando Teste"
-    name: "gcr.io/cloud-builders/go"
-    args: [ "test", "./src" ]
-    env: [ "GOPATH=." ]
 
   # Veja: https://rollout.io/blog/put-gosec-pipeline-spot-source-code-security-problems/
   - id: "Detectando problemas de segurança de código-fonte"
     name: "securego/gosec"
     args: [ "." ]
+    env: [ "GOPATH=." ]
+
+  - id: "Rodando Teste"
+    name: "gcr.io/cloud-builders/go"
+    args: [ "test", "./src" ]
     env: [ "GOPATH=." ]
 
   - id: "Construindo a Imagem"

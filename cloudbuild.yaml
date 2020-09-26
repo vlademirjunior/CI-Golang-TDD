@@ -1,9 +1,11 @@
 steps:
+  - id: "Build da Imagem"
+    name: "gcr.io/cloud-builders/docker"
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/ci-golang-tdd:$SHORT_SHA", "-f", "./.docker/Dockerfile", "."]
 
-  - name: "gcr.io/cloud-builders/docker"
-    id: "Build da imagem e push para dentro do Container Registry"
-    args: ["build", "-t", "gcr.io/$PROJECT_ID/ci-golang-tdd:latest", "-f", "./.docker/Dockerfile", "."]
-  images: ["gcr.io/$PROJECT_ID/ci-golang-tdd:latest"]
+  - id: "Push da Imagem"
+    name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/$PROJECT_ID/ci-golang-tdd:$SHORT_SHA"]
 
   - id: "Rodando o container"
     name: "gcr.io/cloud-builders/docker"

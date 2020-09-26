@@ -17,7 +17,7 @@ steps:
   # Veja: https://rollout.io/blog/put-gosec-pipeline-spot-source-code-security-problems/
   - id: "Detectando problemas de segurança de código-fonte"
     name: "securego/gosec"
-    args: [ "src" ]
+    args: [ "./src" ]
     env: [ "GOPATH=." ]
 
   - id: "Construindo a Imagem"

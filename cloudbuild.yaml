@@ -11,7 +11,7 @@ steps:
 
   - id: "Rodando Teste"
     name: "gcr.io/cloud-builders/go"
-    args: [ "test", "./src" ]
+    args: [ "test", "." ]
     env: [ "GOPATH=." ]
 
   # Veja: https://rollout.io/blog/put-gosec-pipeline-spot-source-code-security-problems/

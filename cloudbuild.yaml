@@ -3,7 +3,7 @@ steps:
   - id: "Build da imagem" # Nome da etapa
     name: 'gcr.io/$PROJECT_ID/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/ci-golang-tdd:latest', '-f', './docker/Dockerfile', '.']
-    images: ['gcr.io/$PROJECT_ID/ci-golang-tdd:latest:latest']
+    images: ['gcr.io/$PROJECT_ID/ci-golang-tdd:latest']
 
 #  - id: "Executar o composer"
 #    name: 'gcr.io/cloud-builders/docker'
